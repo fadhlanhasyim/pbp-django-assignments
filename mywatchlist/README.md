@@ -25,8 +25,6 @@ Aplikasi Heroku yang sudah di-_deploy_ dapat diakses melalui link berikut:
 
 **Jawab:**
 
-![](images/django-cycle.jpg)
-
 JSON (JavaScript Object Notation) pertama kali dikembangkan pada tahun 2001. JSON diturunkan dari bahasa pemrograman JavaScript, tetapi penggunaan untuk membaca dan membuat JSON sudah banyak tersedia di berbagai bahasa pemrograman. JSON digunakan untuk mengirimkan, menyimpan, dan menampilkan data pada platform mobile maupun web. JSON hanya didukung oleh UTF-8 encoding dan tidak mendukung penggunaan komentar. Namun, JSON mendukung penggunaan array di dalamnya. Dewasa ini, penggunaan JSON lebih populer dibandingkan dengan XML berdasarkan data yang dikeluarkan oleh programmableweb.com.
 
 XML (eXtensible Markup Language) pertama kali dikembangkan pada tahun 1997. Serupa dengan JSON, XML juga digunakan pada platform mobile dan web untuk mengirimkan dan menyimpan data. XML diturunkan dari SGML (Standard Generalized Markup Language). Informasi yang dibawa oleh XML disimpan menggunakan tag. XML mendukung penggunaan komen dan berbagai jenis encoding. Sayangnya, XML tidak mendukung penggunaan array seperti JSON. Menurut opini pribadi saya, membaca XML lebih sulit dibandingkan dengan membaca JSON.
@@ -53,12 +51,12 @@ Untuk poin 3, saya membuat model `MywatchlistModel` di `models.py` pada folder `
 
 #### Postman HTML
 
-![](images/postman-html-tugas3.jpg)
+![](../images/postman-html-tugas3.jpg)
 
 #### Postman XML
 
-![](images/postman-xml-tugas3.jpg)
+![](../images/postman-xml-tugas3.jpg)
 
 #### Postman JSON
 
-![](images/postman-JSON-tugas3.jpg)
+![](../images/postman-JSON-tugas3.jpg)
