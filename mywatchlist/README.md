@@ -59,4 +59,4 @@ Untuk poin 3, saya membuat model `MywatchlistModel` di `models.py` pada folder `
 
 #### Postman JSON
 
-![](images/postman-JSON-tugas3.pnh)
+![](images/postman-json-tugas3.png)
