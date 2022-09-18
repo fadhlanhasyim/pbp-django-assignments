@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":1,
+        "fields":{
+            "watched": "True",
+            "title": "Spider-Man: No Way Home",
+            "rating": "4",
+            "release_date": "2021-12-15",
+            "review": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":2,
+        "fields":{
+            "watched": "True",
+            "title": "Prisoners",
+            "rating": "5",
+            "release_date": "2013-10-08",
+            "review": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":3,
+        "fields":{
+            "watched": "True",
+            "title": "The Day After Tomorrow",
+            "rating": "5",
+            "release_date": "2004-05-26",
+            "review": "Jack Hall, paleoclimatologist, must make a daring trek from Washington, D.C. to New York City to reach his son, trapped in the cross-hairs of a sudden international storm which plunges the planet into a new Ice Age."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":4,
+        "fields":{
+            "watched": "False",
+            "title": "The Power of The Dog",
+            "rating": "4",
+            "release_date": "2021-08-17",
+            "review":"Charismatic rancher Phil Burbank inspires fear and awe in those around him. When his brother brings home a new wife and her son, Phil torments them until he finds himself exposed to the possibility of love."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":5,
+        "fields":{
+            "watched": "False",
+            "title": "Coda",
+            "rating": "4",
+            "release_date": "2021-08-13",
+            "review": "CODA's story offers few surprises, but strong representation and a terrific cast bring this coming-of-age story vividly to life."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":6,
+        "fields":{
+            "watched": "True",
+            "title": " Mission: Impossible - Rogue Nation",
+            "rating": "3",
+            "release_date": "2015-08-01",
+            "review": "Ethan and his team take on their most impossible mission yet when they have to eradicate an international rogue organization as highly skilled as they are and committed to destroying the IMF."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":7,
+        "fields":{
+            "watched": "False",
+            "title": "Call Me by Your Name",
+            "rating": "4",
+            "release_date": "2017-08-24",
+            "review": "In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father's research assistant."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":8,
+        "fields":{
+            "watched": "True",
+            "title": "Aquaman",
+            "rating": "5",
+            "release_date": "2018-11-26",
+            "review": "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":9,
+        "fields":{
+            "watched": "False",
+            "title": "The Man From Toronto",
+            "rating": "1",
+            "release_date": "2022-06-24",
+            "review": "Starring Kevin Hart and Woody Harrelson, this mistaken identity film follows a sales consultant who is believed to be the world's deadliest assassin."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlistmodel",
+        "pk":10,
+        "fields":{
+            "watched": "False",
+            "title": "Firestarter",
+            "rating": "2",
+            "release_date": "2022-05-13",
+            "review": "The Peacock reimaging of Stephen King's novel follows a parents on the run with their daughter Charlie from the government because she has the ability to create and control fire."
+        }
+    }
+]

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Nama: </h5>
+<p>{{nama}}</p>
+<h5>NPM: </h5>
+<p>{{npm}}</p>
+
+{% if hasWatchedManyFilms %}
+<h1>Selamat, kamu sudah banyak menonton!</h1>
+{% else %}
+<h1>Wah, kamu masih sedikit menonton!</h1>
+{% endif %}
+
+<table border="1">
+    <tr>
+    <th>Sudah Ditonton</th>
+    <th>Judul</th>
+    <th>Rating</th>
+    <th>Tanggal Rilis</th>
+    <th>Review</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for mywatchlist in data_mywatchlist %}
+        <tr>
+            <th>{{mywatchlist.watched}}</th>
+            <th>{{mywatchlist.title}}</th>
+            <th>{{mywatchlist.rating}}</th>
+            <th>{{mywatchlist.release_date}}</th>
+            <th>{{mywatchlist.review}}</th>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock content %}
