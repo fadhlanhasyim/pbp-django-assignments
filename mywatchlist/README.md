@@ -51,12 +51,12 @@ Untuk poin 3, saya membuat model `MywatchlistModel` di `models.py` pada folder `
 
 #### Postman HTML
 
-![](../images/postman-html-tugas3.jpg)
+![](images/postman-html-tugas3.png)
 
 #### Postman XML
 
-![](../images/postman-xml-tugas3.jpg)
+![](images/postman-xml-tugas3.png)
 
 #### Postman JSON
 
-![](../images/postman-JSON-tugas3.jpg)
+![](images/postman-JSON-tugas3.pnh)
