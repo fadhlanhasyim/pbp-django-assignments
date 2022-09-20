@@ -8,12 +8,15 @@ def show_mywatchlist(request):
     data_mywatchlist = MywatchlistModel.objects.all()
     total_watched = MywatchlistModel.objects.filter(watched=True).count()
     total_unwatched = MywatchlistModel.objects.filter(watched=False).count()
-    hasWatchedManyFilms = total_watched >= total_unwatched
+    if total_watched >= total_unwatched:
+        text = "Selamat, kamu sudah banyak menonton!"
+    else:
+        text = "Wah, kamu masih sedikit menonton!"
     context = {
         "data_mywatchlist":data_mywatchlist,
         "nama":"Fadhlan Hasyim",
         "npm":"2106652215",
-        "hasWatchedManyFilms":hasWatchedManyFilms
+        "text":text
     }
     return render(request, 'mywatchlist.html', context)
 
