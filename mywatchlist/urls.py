@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.urls import path
 from mywatchlist.views import show_mywatchlist, show_mywatchlist_json, show_mywatchlist_xml, show_mywatchlist_json_by_id, show_mywatchlist_xml_by_id
 

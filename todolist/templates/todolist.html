@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Username: {{nama}}</h2>
+
+<button><a href="{% url 'todolist:create-task' %}">Tambah Task Baru</a></button>
+
+<table border="1">
+    <tr>
+    <th>Tanggal Pembuatan</th>
+    <th>Judul</th>
+    <th>Deskripsi</th>
+    <th>Status</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for todolist in data_todolist %}
+        <tr>
+            <th>{{todolist.date}}</th>
+            <th>{{todolist.title}}</th>
+            <th>{{todolist.description}}</th>
+            <th>{% if todolist.is_finished %} Selesai {% else %} Belum Selesai {% endif %}</th>
+            <th>
+                <button><a href="{% url 'todolist:update-task' todolist.id %}">Update Task</a></button>
+            </th>
+            <th>
+                <button><a href="{% url 'todolist:delete-task' todolist.id %}">Delete Task</a></button>
+            </th>
+        </tr>
+    {% endfor %}
+
+</table>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
