@@ -6,40 +6,48 @@
 
 {% block content %}
 
-<div class = "login">
+<section class="flex flex-col items-center justify-center min-h-screen">
 
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
-</div>
+    <div class="login bg-gradient-to-r from-[#150050] to-[#610094] rounded-2xl shadow-lg max-w-3xl p-5">
+    
+        <h1 class="text-xl font-bold text-white text-center">Sign in to your account</h1>
+    
+        <form method="POST" action="" class="mt-4">
+            {% csrf_token %}
+            <table class="w-full">
+                <tr>
+                    <td class="text-slate-50">Username</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="username" placeholder="Username" class="form-control text-sm rounded-lg p-2 w-full"></td>
+                </tr>
+                        
+                <tr>
+                    <td class="text-slate-50 mt-2">Password</td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" placeholder="Password" class="form-control text-sm rounded-lg p-2 w-full"></td>
+                </tr>
+    
+                <tr>
+                    <td><input class="btn login_btn mt-4 p-2 bg-red-100 rounded-lg w-full text-[#3F0071] font-bold" type="submit" value="Login"></td>
+                </tr>
+            </table>
+        </form>
+    
+        {% if messages %}
+            <ul class="text-center">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}     
+            
+        <p class="mt-1 text-slate-50">
+            Don't have an account yet? <a href="{% url 'todolist:register' %}" class="underline font-bold">Sign up</a>
+        </p>
+    
+    </div>
+</section>
 
 {% endblock content %}

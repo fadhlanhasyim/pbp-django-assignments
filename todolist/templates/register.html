@@ -6,29 +6,64 @@
 
 {% block content %}  
 
-<div class = "login">
-    
-    <h1>Formulir Registrasi</h1>  
+<section class="flex flex-col items-center justify-center min-h-screen">
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
+    <div class = "register bg-gradient-to-r from-[#150050] to-[#610094] rounded-2xl shadow-lg max-w-3xl p-5">
+        
+        <h1 class="text-xl font-bold text-white text-center">Register</h1>  
 
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
+            <form method="POST" action="" class="mt-4">
+                {% csrf_token %}
+                <div>
+                    <div class="text-slate-50" >
+                        <label for="id_username">Username</label>
+                    </div>
+                    <div>
+                        <input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id = "id_username" class="form-control text-sm rounded-lg p-2 w-full">
+                    </div>
+                    <div class="text-slate-50 mt-2">
+                        <label for="id_password1">Password</label>
+                    </div>
+                    <div>
+                        <input type="password" name="password1" autocomplete="new-password" required id = "id_password1" class="form-control text-sm rounded-lg p-2 w-full">
+                    </div>
+                    <div class="text-slate-50 mt-2">
+                        <label for="id_password2">Confirm Password</label>
+                    </div>
+                    <div>
+                        <input type="password" name="password2" autocomplete="new-password" required id = "id_password2" class="form-control text-sm rounded-lg p-2 w-full">
+                    </div>
 
-</div>  
+                    {% if form.username.errors %}  
+                    <div class="text-sm text-rose-900 mt-1">
+                        {{ form.username.errors }}
+                    </div> 
+                    {% endif %}
+                    {% if form.password1.errors %}  
+                    <div class="text-sm text-rose-900 mt-1">
+                        {{ form.password1.errors }}
+                    </div> 
+                    {% endif %}
+                    {% if form.password2.errors %}  
+                    <div class="text-sm text-rose-900 mt-1">
+                        {{ form.password2.errors }}
+                    </div> 
+                    {% endif %}
+
+                    <div>
+                        <input class="btn login_btn mt-4 p-2 bg-red-100 rounded-lg w-full text-[#3F0071] font-bold"  type="submit" name="submit" value="Daftar"/>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-white">
+                            Already have an account? <a href="{% url 'todolist:login' %}" class="underline font-bold">Log in</a>
+                        </span>
+                    </div>
+                </div>
+
+            </form>
+
+    </div>  
+
+</section>
 
 {% endblock content %}
