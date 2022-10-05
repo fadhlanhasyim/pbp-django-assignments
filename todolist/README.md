@@ -95,3 +95,65 @@ username_2: hasyimm
 password_2: Vc#9mC5HyJzH!tR
 ```
 Kesepuluh, untuk pengerjaan bonus, saya menerapkan CRUD pada django untuk mengambil data yang sudah ada dan meng-update nilainya, serta untuk menghapus datanya.
+
+# Tugas 5 Proyek Django PBP
+
+## Jawaban Pertanyaan
+
+#### Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+
+**Jawab:**
+
+Internal CSS adalah kode CSS yang ditulis di dalam tag `<style>` dan kode HTML dituliskan di bagian atas (header) file HTML. Kelebihan internal CSS adalah perubahan pada internal CSS hanya berlaku pada satu halaman saja, jumlah file yang digunakan lebih sedikit karena HTML dan CSS berada dalam satu file yang sama. Kekurangan internal CSS adalah tidak efisien jika terdapat elemen yang menggunakan style yang sama, performa lebih lambat karena proses reload CSS yang berbeda-beda di setiap halaman.
+
+Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML. Eksternal CSS ditulis di sebuah file khusus yang berekstensi `.css`. File eksternal CSS biasanya diletakkan setelah bagian `<head>` pada halaman. Kelebihan eksternal CSS adalah membuat file HTML lebih rapi dan terstruktur, loading website lebih cepat, CSS yang sama dapat digunakan pada banyak elemen yang berbeda. Kekurangan eksternal CSS adalah halaman akan menjadi berantakan ketika file CSS gagal dipanggil oleh file HTML.
+
+Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML, tepatnya di atribut style. Kelebihan inline CSS adalah proses permintaan HTTP yang lebih kecil dan proses load website akan lebih cepat, membantu ketika hanya ingin menguji dan melihat perubahan pada satu elemen. Kekurangan inline CSS adalah tidak efisien karena Inline style CSS hanya bisa diterapkan pada satu elemen HTML.
+
+#### Jelaskan tag HTML5 yang kamu ketahui.
+
+**Jawab:**
+
+`<a>`: untuk mendefinisikan sebuah hyperlink.
+`<body>`: untuk mendefinisikan bagian "body" dari HTML.
+`<br>`: untuk memberikan _single line break_.
+`<button>`: untuk membuat sebuah tombol.
+`<div>`: untuk memberikan bagian dari dokumen.
+`<form>`: untuk mendefinisikan HTML form.
+`<head>`: untuk mendefinisikan bagian "head" dari HTML.
+`<h1>`-`<h6>`: untuk mendefinisikan heading pada HTML.
+`<html>`: untuk mendefinisikan root dari HTML
+`<img>`: untuk menampilkan gambar.
+`<input>`: untuk mendefinisikan input control. 
+`<label>`: untuk memberikan label. 
+`<li>`: untuk mendefinisikan list. 
+`<p>`: untuk mendefinisikan paragraf. 
+`<script>`: untuk mendefinisikan script bagi client-side processing.
+`<span>`: untuk mendefiniskan bagian inline styleless.  
+`<style>`: untuk memasukkan informasi style pada HTML.
+`<table>`: untuk mendefinisikan sebuah tabel. 
+`<td>`: untuk mendefinisikan sebuah sel pada tabel. 
+`<th>`: untuk mendefinisikan sebuah header pada tabel. 
+`<title>`: untuk mendefinisikan judul dokumen.
+
+#### Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+
+**Jawab:**
+
+Element selector: menggunakan tag HTML sebagai selector untuk memberikan style pada elemen tersebut.
+ID selector: menambahkan ID pada elemen HTML dan menggunakan ID tersebut pada file CSS sebagai selector.
+Class Selector: menambahkan atribut class pada elemen HTML dan menggunakan nama class tersebut sebagai selector pada file CSS.
+
+#### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+**Jawab:**
+
+Pertama, saya mencari inspirasi desain website yang elegan, mencari color palette yang sesuai, dan mempelajari bagaimana dasar-dasar Tailwind CSS.
+
+Kedua, saya menambahkan baris ini `<script src="https://cdn.tailwindcss.com"></script>` pada bagian `<head>` di base.html. 
+
+ Ketiga, saya mengimplementasikan style pada setiap elemen HTML. Saya menambahkan style-style tersebut pada atribut class elemen HTML. Bagian ini memakan waktu paling lama, tetapi sangat mengasyikkan!
+
+ Keempat, saya menerapkan prinsip responsive design pada halaman web.
+
+ Kelima, saya melakukan cross-check dan melakukan push serta commit ke Github. Selesai! :D
