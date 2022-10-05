@@ -152,8 +152,8 @@ Pertama, saya mencari inspirasi desain website yang elegan, mencari color palett
 
 Kedua, saya menambahkan baris ini `<script src="https://cdn.tailwindcss.com"></script>` pada bagian `<head>` di base.html. 
 
- Ketiga, saya mengimplementasikan style pada setiap elemen HTML. Saya menambahkan style-style tersebut pada atribut class elemen HTML. Bagian ini memakan waktu paling lama, tetapi sangat mengasyikkan!
+Ketiga, saya mengimplementasikan style pada setiap elemen HTML. Saya menambahkan style-style tersebut pada atribut class elemen HTML. Bagian ini memakan waktu paling lama, tetapi sangat mengasyikkan!
 
- Keempat, saya menerapkan prinsip responsive design pada halaman web.
+Keempat, saya menerapkan prinsip responsive design pada halaman web.
 
- Kelima, saya melakukan cross-check dan melakukan push serta commit ke Github. Selesai! :D
+Kelima, saya melakukan cross-check dan melakukan push serta commit ke Github. Selesai! :D
