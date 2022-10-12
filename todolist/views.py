@@ -3,11 +3,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
+from django.core import serializers
 from todolist.models import Task
 from todolist.forms import TaskForm
 import datetime
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -81,3 +83,62 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+@login_required(login_url='/todolist/login')
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@login_required(login_url='/todolist/login')
+@csrf_exempt
+def delete_task_ajax(request, id):
+    if request.method == "DELETE":
+        task = get_object_or_404(Task, id = id)
+        task.delete()
+    return HttpResponse(status=202)
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def create_task_ajax(request):
+    task = TaskForm()
+
+    if request.method == "POST":
+        task = TaskForm(request.POST)
+        if task.is_valid():
+            title = task.cleaned_data['title']
+            description = task.cleaned_data['description']
+
+            new_task = Task.objects.create(title=title, description=description, user=request.user, date=datetime.date.today())
+            new_task.save()
+
+            result = {
+                'fields':{
+                    'title':new_task.title,
+                    'description':new_task.description,
+                    'is_finished':new_task.is_finished,
+                    'date':new_task.date,
+                },
+                'pk':new_task.pk
+            }
+
+            return JsonResponse(result)
+
+@login_required(login_url='/todolist/login')
+@csrf_exempt
+def update_task_ajax(request, id):
+    if request.method == "PATCH":
+        task = get_object_or_404(Task, id = id)
+        task.is_finished = not task.is_finished
+        task.save()
+    
+    result = {
+        'fields':{
+            'title': task.title,
+            'description': task.description,
+            'is_finished': task.is_finished,
+            'date': task.date,
+            },
+            'pk': task.pk
+        }
+        
+    return JsonResponse(result)
